@@ -1,0 +1,197 @@
+.container {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  padding-left: 21px; */
+  /*  font-family: "Arial", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  background-image: url("/img/monster1.png");
+  background-size: 15%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 90px;
+  background-position-y: center;
+  h1 {
+    padding-top: 21px;
+    background-color: #9cf6f6;
+    width: 110px;
+    height: 85px;
+    border-radius: 50%;
+  }
+}
+
+.nav {
+  grid-area: nav;
+  background-color: rgb(226, 243, 243);
+}
+
+main {
+  grid-area: main;
+  height: 63vh;
+  border-right: 5px solid rgb(203, 223, 223);
+  form {
+    display: flex;
+    padding-top: 13px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1em;
+    line-height: 2em;
+   button {
+margin-top: 0.7em;
+padding: 7px;
+cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(94, 240, 240);
+  }
+}
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+
+}
+/* Styling av monsster formulär */
+.monsterBox {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Styling av monsterkortet */
+.monster-box {
+  display: inline-block;
+  /*   border: 2px solid #333; */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  p {
+    color: aqua;
+  }
+  button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid aqua;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: aqua;
+    }
+  }
+}
+
+span {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: aqua;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+.see-all {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: aqua;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+}
+.reZise {
+  display: block;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.5em;
+  width: 600px;
+  height: 50vh;
+  text-align: center;
+  padding-top: 3em;
+  line-height: 1.5em;
+  button {
+    cursor: pointer;
+    padding: 0.9em;
+    border-radius: 1em;
+  }
+}
+
+/* Styling av footer */
+footer {
+  grid-area: footer;
+  /* margin-top: 40px; */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    height: auto;
+    min-width: 225px;
+    min-height: 225px;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monster Klass</title>
+    <script src="/app/MonsterInc.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--link for search-->
+    <link rel="stylesheet" href="/css/search.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <!-- Sökning -->
+    <div class="nav">
+      <section class="search-section">
+        <div class="search-input-wrapper">
+          <div class="search-input">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search"
+              aria-label="Search monsters"
+            />
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="search-icon" aria-label="Search button">
+          <i class="fas fa-search" id="search-button" aria-hidden="true"></i>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <header>
+        <h1>Monster web</h1>
+      </header>
+      <!-- Lista av skapade monster -->
+      <aside>
+        <section id="monster-list-section" aria-labelledby="monster-list">
+          <h2 id="monster-header" style="display: none">Created Monsters</h2>
+          <div class="monster-container"></div>
+          <!-- Den här div-taggen används för att visa alla monster -->
+          <span id="number-of-monsters">Number of monsters: 0</span>
+          <button class="see-all">RESET</button>
+        </section>
+      </aside>
+
+      <main>
+        <!-- Bygg Monster Sektion -->
+        <!--     <section class="monster-form-section"> -->
+
+        <form id="monsterForm" aria-labelledby="monster-form">
+          <h2>Build Your Monster</h2>
+          <!--   <fieldset> -->
+          <!--   <legend>Monster Attributes</legend> -->
+
+          <label for="name">Monster Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter monster's name"
+            required
+          />
+          <!-- inte längre fanns dynamiska input -------------------------- -->
+          <label for="type">Monster Type:</label>
+          <select id="type" name="type" required></select>
+
+          <label for="color">Monster Color:</label>
+          <select id="color" name="color" required></select>
+
+          <label for="eyes">Number of eyes:</label>
+          <input
+            type="number"
+            id="eyes"
+            name="eyes"
+            placeholder="Choose number of eyes"
+            min="0"
+            max="20"
+            required
+          />
+
+          <label for="ears">Number of ears:</label>
+          <input
+            type="number"
+            id="ears"
+            name="ears"
+            placeholder="Choose number of ears"
+            min="0"
+            max="20"
+            required
+          />
+
+          <label for="horn">Number of horns:</label>
+          <input
+            type="number"
+            id="horn"
+            name="horn"
+            placeholder="Choose number of horns"
+            min="0"
+            max="20"
+            required
+          />
+
+          <label for="tentacles">Number of tentacles:</label>
+          <input
+            type="number"
+            id="tentacles"
+            name="tentacles"
+            placeholder="Choose number of tentacles"
+            min="0"
+            max="20"
+            required
+          />
+
+          <button type="submit">Add Monster</button>
+
+          <!--  </fieldset> -->
+        </form>
+        <!-- </section> -->
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <a
+          href="https://github.com/EmilJohanssonz/Grupp6.git"
+          target="_blank"
+          aria-label="Github link"
+        >
+          <img src="/img/github.png" alt="Github logo" />
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>
